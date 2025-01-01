@@ -12,29 +12,23 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.core.ktx)
-    implementation(libs.lifecycle.runtime.ktx)
-    implementation(libs.activity.compose)
+    // compose
+    implementation(libs.bundles.compose)
     implementation(platform(libs.compose.bom))
-    implementation(libs.ui)
-    implementation(libs.ui.graphics)
-    implementation(libs.ui.tooling.preview)
-    implementation(libs.material3)
+    
+    // core
+    implementation(libs.bundles.ktx)
     implementation(libs.material3)
     implementation(libs.ksp)
 
     // lyricist
-    implementation(libs.lyricist)
-    implementation(libs.lyricist.processor)
+    implementation(libs.bundles.lyricist)
     ksp(libs.lyricist.processor)
 
     // test
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
     androidTestImplementation(platform(libs.compose.bom))
-    androidTestImplementation(libs.ui.test.junit4)
+    androidTestImplementation(libs.bundles.android.test)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 }
