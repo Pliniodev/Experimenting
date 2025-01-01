@@ -1,0 +1,49 @@
+name: code-quality
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      # Setup
+      - name: Setup ambient
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+      
+      # Ktlint
+      - name: Run ktlintCheck
+        run: |
+          ./gradlew :app:ktlintCheck 
+          ./gradlew :feature:ktlintCheck  
+          
+  runTest:
+    runs-on: ubuntu-latest
+      
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      # Setup  
+      - name: Setup ambient
+        uses: actions/setup-java@v2
+        with: 
+          distribution: 'adopt'
+          java-version: '17'
+      
+      # Execute unit tests
+      - name: Unit tests
+        run: ./gradlew testDebugUnitTest
+      
+      - name: Android Test report
+        uses: asadmansr/android-test-report-action@v1.2.0
+        if: ${{ always() }} # IMPORTANT: run Android Test Report
