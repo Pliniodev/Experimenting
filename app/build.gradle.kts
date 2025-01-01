@@ -24,6 +24,12 @@ dependencies {
     // lyricist
     implementation(libs.bundles.lyricist)
     ksp(libs.lyricist.processor)
+    
+    // voyager
+    implementation(libs.bundles.voyager)
+    
+    // koin
+    implementation(libs.bundles.koin)
 
     // test
     testImplementation(libs.junit)
