@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Template-multimodule"
+rootProject.name = "Experimenting"
 include(":app")
 include(":feature")
  

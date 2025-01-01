@@ -4,10 +4,10 @@ plugins {
 }
 
 android {
-    namespace = "com.pliniodev.partiturasecompania"
+    namespace = "com.pliniodev.experimenting"
 
     defaultConfig {
-        applicationId = "com.pliniodev.partiturasecompania"
+        applicationId = "com.pliniodev.experimenting"
     }
 }
 
