@@ -8,11 +8,10 @@ plugins {
 apply<MainGradlewPlugin>()
 
 android {
-    namespace = "com.pliniodev.experimenting.feature"
+    namespace = "com.pliniodev.experimenting.core.navigation"
 }
 
 dependencies {
-    implementation(project(":core:navigation"))
 
     // compose
     implementation(libs.bundles.compose)

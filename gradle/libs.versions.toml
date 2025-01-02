@@ -9,11 +9,15 @@ espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.7.0"
 activity-compose = "1.8.2"
 compose-bom = "2023.10.01"
+compose-compiler = "1.5.4"
 ktlint-version = "11.6.0"
 materia3 = "1.1.2"
 ksp = "1.9.21-1.0.15"
 lyricist = "1.4.2"
 ktlint-gradle = "11.6.0"
+voyager = "1.0.1"
+koin = "4.0.1"
+compose-plugin = "1.6.2"
 
 [libraries]
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin"}
@@ -40,6 +44,16 @@ ksp = { group = "com.google.devtools.ksp", name = "symbol-processing-api", versi
 lyricist = { module = "cafe.adriel.lyricist:lyricist", version.ref = "lyricist" }
 lyricist-processor = { module = "cafe.adriel.lyricist:lyricist-processor", version.ref = "lyricist" }
 
+#Voyager
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-screenModel = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyager" }
+voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
+
+#koin
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+
 #Tests
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
@@ -52,9 +66,12 @@ compose = ["ui", "ui-graphics", "ui-tooling", "ui-tooling-preview", "activity-co
 android-test = ["androidx-test-ext-junit", "espresso-core", "ui-test-junit4"]
 ktx = ["core-ktx", "lifecycle-runtime-ktx"]
 lyricist = ["lyricist", "lyricist-processor"]
+voyager = ["voyager-navigator", "voyager-screenModel", "voyager-koin"]
+koin = ["koin-core", "koin-compose", "koin-android"]
 
 #FIX-ME find a way to use libs.plugins on buildSrc
 [plugins]
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-version" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
