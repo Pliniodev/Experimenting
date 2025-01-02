@@ -1,9 +1,10 @@
 A simple template with technologies that I use most, preconfigured.
 - buildSrc
-- pre-compiled-plugin
+- gradle-plugin
 - compose
 - material3
 - voyager
+- koin
 - lyricist
 - ksp
 - makefile
