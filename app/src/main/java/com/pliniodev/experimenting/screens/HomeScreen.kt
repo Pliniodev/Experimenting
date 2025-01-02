@@ -14,16 +14,16 @@ import com.pliniodev.experimenting.theme.CustomSpacing
 import com.pliniodev.experimenting.theme.components.ThemeButton
 
 internal object HomeScreen : Screen {
-    
+
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.currentOrThrow
         val postListScreen = rememberScreen(SharedScreen.FeatureHome)
-        
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(CustomSpacing.medium)
+                .padding(CustomSpacing.medium),
         ) {
             ThemeButton(text = "Feature 1") {
                 navigator.push(postListScreen)

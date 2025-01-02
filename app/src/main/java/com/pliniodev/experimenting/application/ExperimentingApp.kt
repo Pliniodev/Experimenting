@@ -8,7 +8,7 @@ class ExperimentingApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        
+
         ScreenRegistry {
             featureScreenModule()
         }

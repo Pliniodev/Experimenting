@@ -9,8 +9,6 @@ apply<MainGradlewPlugin>()
 
 android {
     namespace = "com.pliniodev.experimenting.feature"
-
-   
 }
 
 dependencies {
