@@ -19,7 +19,7 @@ class ExperimentingApp : Application() {
             androidContext(this@ExperimentingApp)
             modules(
                 appModule,
-                featureModule
+                featureModule,
             )
         }
 
