@@ -1,4 +1,4 @@
-package com.pliniodev.partiturasecompania
+package com.pliniodev.experimenting.resources
 
 import cafe.adriel.lyricist.LyricistStrings
 
