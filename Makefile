@@ -6,5 +6,5 @@ help:
 
 ## Lints
 .PHONY: lint
-lint: ## Runs ktlintFormat and ktlintCheck tasks
-	./gradlew ktlintFormat ktlintCheck
+lint: ## Runs Clean and ktlintFormat and ktlintCheck tasks
+	./gradlew clean ktlintFormat ktlintCheck
