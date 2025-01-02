@@ -1,4 +1,4 @@
-package com.pliniodev.partiturasecompania.ui.theme
+package com.pliniodev.experimenting.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

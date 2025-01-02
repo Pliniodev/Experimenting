@@ -1,4 +1,4 @@
-package com.pliniodev.partiturasecompania.ui.theme
+package com.pliniodev.experimenting.theme
 
 import android.app.Activity
 import android.os.Build
